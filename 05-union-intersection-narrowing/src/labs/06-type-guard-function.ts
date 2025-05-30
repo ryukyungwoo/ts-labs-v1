@@ -4,9 +4,9 @@ type Dog = { type: "dog"; name: string; bark: () => void };
 type Cat = { type: "cat"; name: string; meow: () => void };
 type Animal = Dog | Cat;
 
-// function isDog(animal: Animal): animal is Dog {
-//   // 여기에 코드를 작성하세요.
-// }
+function isDog(animal: Animal): animal is Dog {
+  return animal.type === "dog";
+}
 
 const animals: Animal[] = [
   { type: "dog", name: "몽이", bark: () => console.log("멍!") },
@@ -15,3 +15,5 @@ const animals: Animal[] = [
 ];
 
 // isDog를 filter에 활용해서 Dog만 골라 각각 이름과 짖는 소리를 출력하세요.
+
+animals.filter(isDog).forEach((e) => e.bark());

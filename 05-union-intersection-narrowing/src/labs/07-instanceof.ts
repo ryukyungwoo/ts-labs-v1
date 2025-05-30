@@ -16,9 +16,19 @@ class ValidationError extends Error {
 
 function handleError(err: Error) {
   // 여기에 코드를 작성하세요.
+  if (err instanceof NotFoundError) {
+    console.log(`${err.message} , ${err.resource}`);
+    return;
+  }
+  if (err instanceof ValidationError) {
+    console.log(`${err.message}, ${err.field}`);
+    return;
+  }
+  console.log(err.message);
+  return;
 }
 
 // 사용 예시
-// handleError(new NotFoundError("User"));
-// handleError(new ValidationError("email"));
-// handleError(new Error("알 수 없는 에러"));
+handleError(new NotFoundError("User"));
+handleError(new ValidationError("email"));
+handleError(new Error("알 수 없는 에러"));

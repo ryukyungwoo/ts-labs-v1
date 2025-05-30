@@ -8,3 +8,13 @@
 const add = (a: number, b: number) => a + b;
 calculate(10, 20, add) // 30
 */
+
+type Add = (a: number, b: number) => number;
+
+const add: Add = (a: number, b: number) => a + b;
+
+function calculate(a: number, b: number, add: Add) {
+  return add(a, b);
+}
+
+console.log(calculate(10, 20, add));

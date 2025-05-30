@@ -6,3 +6,9 @@
 예시)
 sum([1, 2, 3]) // 6
 */
+
+function numbers(...nums: number[]): number {
+  return nums.reduce((acc, crr) => acc + crr, 0);
+}
+
+console.log(numbers(1, 2, 3));

@@ -7,8 +7,13 @@ type ApiResponse = SuccessResponse | ErrorResponse;
 
 function handleApiResponse(res: ApiResponse) {
   // 여기에 코드를 작성하세요.
+  if (res.ok) {
+    console.log(res.data);
+  } else {
+    console.log(res.error);
+  }
 }
 
 // 사용 예시
-// handleApiResponse({ ok: true, data: "가입 완료" });
-// handleApiResponse({ ok: false, error: "중복된 이메일" });
+handleApiResponse({ ok: true, data: "가입 완료" });
+handleApiResponse({ ok: false, error: "중복된 이메일" });

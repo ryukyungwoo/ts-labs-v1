@@ -3,8 +3,18 @@
 // Cat은 name(문자열), color(문자열) 속성을 가져야 합니다.
 // 아래 cat 객체가 타입 에러 없이 동작하게 하세요.
 
-const cat = { name: "나비", color: "회색" };
+const cat: Cat = { name: "나비", color: "회색" };
 
-function printCat(c) {
+function printCat(c: Cat) {
   console.log(`이름: ${c.name}, 색상: ${c.color}`);
 }
+
+interface Animal {
+  name: string;
+}
+
+interface Cat extends Animal {
+  color: string;
+}
+
+printCat(cat);

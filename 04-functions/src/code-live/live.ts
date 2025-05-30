@@ -43,3 +43,25 @@ type OP = (c: number, d: number) => number;
 function compute2(a: number, b: number, op: OP) {
   return op(a, b);
 }
+console.log(compute2(1, 2, (a, b) => a + b));
+
+let func: OP = function (a, b) {
+  return a + b;
+};
+
+console.log(compute2(1, 2, func));
+
+// 함수 오버로딩
+// 시그니쳐가 달라야 됨
+
+function func2(a: string, b: string): string;
+function func2(a: number, b: number): number;
+function func2(a: string, b: number): number;
+
+function func2(a: any, b: any): any {
+  return a + b;
+}
+
+func2("a", 1);
+func2(1, 1);
+func2("1", "a");

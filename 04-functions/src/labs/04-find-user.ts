@@ -14,3 +14,20 @@ const users = [
 const isActiveUser = (u: User) => u.isActive;
 findUser(users, isActiveUser) // { id: 2, name: 'Lee', isActive: true }
 */
+const users = [
+  { id: 1, name: "Kim", isActive: false },
+  { id: 2, name: "Lee", isActive: true },
+];
+type User = {
+  id: number;
+  name: string;
+  isActive: boolean;
+};
+type Active = (u: User) => boolean;
+const isActiveUser = (u: User) => u.isActive;
+
+function findUser(userList: User[], active: Active) {
+  return userList.find(active);
+}
+
+console.log(findUser(users, isActiveUser));
