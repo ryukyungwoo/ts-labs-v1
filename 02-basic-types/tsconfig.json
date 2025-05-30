@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "target": "ESNext", // es 버전 정하기
+    "strict": true, // 타입체킹을 더 엄격하게
+    "strictNullChecks": true, // null 체킹을 더 엄격하게
+    "outDir": "./dist", // ts를 컴파일 해서 만들어진 js를 어디가 옮길지
+    "moduleDetection": "force" // 같은 폴더 내에 동일한 변수가 있으면 안됨
+  },
+  "include": ["src"] // src 폴더 내의 파일만 타입체킹을 할것
+}

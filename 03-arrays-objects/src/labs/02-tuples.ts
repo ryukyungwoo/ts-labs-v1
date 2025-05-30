@@ -6,3 +6,20 @@
  */
 
 // TODO: StudentScore 타입 선언, scores 배열 생성, passed 계산
+
+type StudentScore = [name: string, score: number];
+
+let student1: StudentScore = ["stu1", 100];
+let student2: StudentScore = ["stu2", 100];
+let student3: StudentScore = ["stu3", 100];
+
+let passed: StudentScore[] = [];
+let scores = [student1, student2, student3];
+
+scores.forEach((student) => {
+  let [name, score] = student;
+
+  if (score >= 70) {
+    passed.push(student);
+  }
+});

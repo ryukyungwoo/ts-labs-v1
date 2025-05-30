@@ -15,4 +15,5 @@ let guessUnknown: unknown = 42;
 // (3) 타입 가드로 unknown 값을 안전하게 다뤄보세요.
 if (typeof guessUnknown === "number") {
   // 여기에 toFixed() 사용해보세요.
+  guessUnknown.toFixed();
 }

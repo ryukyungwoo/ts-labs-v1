@@ -8,7 +8,7 @@ let u1: unknown = "뭔가";
 let a1: any = 777;
 
 // n1 = s1;
-// s1 = a1;
+s1 = a1;
 // b1 = u1;
-// u1 = n1;
-// a1 = b1;
+u1 = n1;
+a1 = b1;

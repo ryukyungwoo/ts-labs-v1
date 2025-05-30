@@ -10,4 +10,4 @@ mystery = false;
 // 아래처럼 숫자/문자열/불린 메서드를 모두 호출해도 에러가 안 나는지 확인해보세요.
 // mystery.toFixed();
 // mystery.toUpperCase();
-// mystery.valueOf();
+mystery.valueOf();
