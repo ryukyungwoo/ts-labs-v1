@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Todo List Modern UI</title>
+    <link rel="stylesheet" href="todo.css" />
+  </head>
+  <body>
+    <main class="container">
+      <div class="date-title" id="date-title"></div>
+      <form id="add-form" autocomplete="off" class="add-form">
+        <input
+          type="text"
+          id="add-input"
+          placeholder="할 일을 입력하세요"
+          maxlength="40"
+          required
+        />
+        <button type="submit" id="add-btn" aria-label="할 일 추가">+</button>
+      </form>
+      <div class="task-count" id="task-count"></div>
+      <ul id="todo-list" class="todo-list"></ul>
+    </main>
+    <script src="todo.js"></script>
+  </body>
+</html>

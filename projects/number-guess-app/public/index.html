@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>숫자 맞히기 게임 (1~100)</title>
+    <link rel="stylesheet" href="number-game.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h2 class="game-title">숫자 맞히기 게임</h2>
+      <form id="guess-form" autocomplete="off" class="guess-form">
+        <input
+          type="number"
+          id="guess-input"
+          placeholder="1~100 입력"
+          min="1"
+          max="100"
+          required
+        />
+        <button type="submit" id="guess-btn">확인</button>
+      </form>
+      <div class="status-bar">
+        <span id="trial-count">시도: 0회</span>
+        <button id="reset-btn" class="reset-btn" style="display: none">
+          다시하기
+        </button>
+      </div>
+      <div class="result-msg" id="result-msg"></div>
+      <ul class="history-list" id="history-list"></ul>
+    </main>
+    <script src="number-game.js"></script>
+  </body>
+</html>

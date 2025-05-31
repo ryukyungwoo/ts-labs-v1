@@ -1,0 +1,118 @@
+body {
+  background: #f6f7fb;
+  font-family: "Noto Sans KR", "Pretendard", Arial, sans-serif;
+  margin: 0;
+  color: #232d41;
+  min-height: 100vh;
+}
+.container {
+  max-width: 370px;
+  margin: 48px auto 0 auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 14px rgba(60, 70, 90, 0.09);
+  padding: 36px 24px 28px 24px;
+}
+.game-title {
+  text-align: center;
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 28px;
+  color: #304278;
+}
+.guess-form {
+  display: flex;
+  gap: 9px;
+  margin-bottom: 18px;
+}
+#guess-input {
+  flex: 1;
+  padding: 10px 13px;
+  border: 1.2px solid #e0e3ea;
+  border-radius: 7px;
+  font-size: 1.08rem;
+  background: #f9fafc;
+  transition: border 0.14s, background 0.14s;
+}
+#guess-input:focus {
+  border-color: #4c75f2;
+  background: #fff;
+  outline: none;
+}
+#guess-btn {
+  flex: none;
+  background: #4c75f2;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 0.99rem; /* ← 1.18rem → 0.99rem(혹은 1rem)로 수정 */
+  font-weight: 600;
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+  box-shadow: 0 2px 7px 0 rgba(80, 100, 200, 0.04);
+  transition: background 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.2; /* 문구가 너무 위아래로 몰리지 않도록 */
+  letter-spacing: 0.01em;
+  padding: 0;
+}
+
+#guess-btn:hover {
+  background: #2949b0;
+}
+
+.status-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  color: #6876a9;
+  margin-bottom: 15px;
+}
+.reset-btn {
+  background: #ccd6f8;
+  color: #2949b0;
+  border: none;
+  border-radius: 7px;
+  padding: 6px 15px;
+  font-size: 1.02rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 13px;
+  transition: background 0.13s, color 0.13s;
+  display: inline-block;
+}
+.reset-btn:hover {
+  background: #4c75f2;
+  color: #fff;
+}
+
+.result-msg {
+  font-size: 1.13rem;
+  font-weight: 500;
+  color: #2b2e44;
+  min-height: 1.7em;
+  text-align: center;
+  margin-bottom: 13px;
+}
+
+.history-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.history-list li {
+  font-size: 1.04rem;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 3px;
+  color: #565a76;
+}
+.history-list li:last-child {
+  color: #1e2358;
+  font-weight: 600;
+}
