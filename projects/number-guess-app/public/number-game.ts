@@ -74,14 +74,16 @@ function judgeAndAddTryList(attempt : Attempt) : void {
 // attempt 생성
 function makeAttempt() : Attempt | Error{
     
-    if (!guessInput) {return new Error("값이 들어오지 않았습니다.")}
+    if (!guessInput) {
+        return new Error("값이 들어오지 않았습니다.")}
     
     else{
-    const input = Number(guessInput?.value)
-    if (isNaN(input) || input < 1 || input > 100) {
-    return new Error("1~100 사이의 숫자를 입력해야 합니다.");
-  }
-return {input : input}
+        const input = Number(guessInput?.value)
+        if (isNaN(input) || input < 1 || input > 100) {
+        return new Error("1~100 사이의 숫자를 입력해야 합니다.");
+    }
+    resetInput()
+    return {input : input}
     }
     
 }
@@ -95,12 +97,12 @@ function trialCounter() :void {
 function judgeTheAttempt(attempt : Attempt) :Attempt {
     // 업일 때때
     if(attempt.input > currentTarget.target) {
-        attempt.upAndDown = "업"
+        attempt.upAndDown = "다운"
         return attempt
     }
     // 다운일 때때
     else if(attempt.input < currentTarget.target) {
-        attempt.upAndDown = "다운"
+        attempt.upAndDown = "업"
         return attempt
     }
     // 맞았을 때때
@@ -182,10 +184,15 @@ function restObj<T extends object>(a: T) : void {
     }
 }
 
-function restHtml(): void {
-  if (guessInput) {
+function resetInput() : void {
+    if (guessInput) {
     guessInput.value = "";
   }
+
+}
+
+function restHtml(): void {
+  resetInput()
 
   if (trialCount) {
     trialCount.innerHTML = "시도: 0회";

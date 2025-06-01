@@ -1,8 +1,7 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "strict": true,
-    "outDir": "./dist", 
+    "strict": true
     // "moduleDetection": "force"
   },
   "include": ["todo-app/public", "number-guess-app/public"]
