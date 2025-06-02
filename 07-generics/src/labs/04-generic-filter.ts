@@ -18,6 +18,11 @@
  */
 
 // TODO: 여기에 myFilter 함수를 작성하세요.
+type Predicate<T> = (item: T) => boolean;
+
+function myFilter<T>(arr: T[], predicate: Predicate<T>): void {
+  arr.filter(predicate).forEach((e) => console.log(e));
+}
 
 // 아래 코드를 복사해 결과를 확인해 보세요.
 const odds = myFilter([1, 2, 3, 4], (n) => n % 2 === 1); // [1, 3]

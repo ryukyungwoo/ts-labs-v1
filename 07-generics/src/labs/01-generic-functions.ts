@@ -18,6 +18,10 @@
 
 // TODO: 여기에 getLastElement 함수를 작성하세요.
 
+function getLastElement<T>(t: T[]): void {
+  console.log(t[t.length - 1]);
+}
+
 // 아래 코드를 복사해 결과를 확인해 보세요.
 const n = getLastElement([1, 2, 3]); // 3
 const w = getLastElement(["a", "b"]); // 'b'

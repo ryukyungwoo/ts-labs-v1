@@ -16,6 +16,9 @@
  */
 
 // TODO: 여기에 getObjectKeys 함수를 작성하세요.
+function getObjectKeys<A extends keyof object>(obj: object): (keyof A)[] {
+  return Object.keys(obj);
+}
 
 // 아래 코드를 복사해 결과를 확인해 보세요.
 const keys1 = getObjectKeys({ id: 1, name: "유저" }); // ["id", "name"]

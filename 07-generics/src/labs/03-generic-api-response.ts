@@ -18,7 +18,15 @@
  */
 
 // TODO: 여기에 ApiResult 인터페이스를 작성하세요.
+interface ApiResult<T> {
+  success: boolean;
+  data: T;
+  error?: string;
+}
 
 // 아래 코드를 복사해 결과를 확인해 보세요.
 const res1: ApiResult<number> = { success: true, data: 123 };
 const res2: ApiResult<string[]> = { success: false, data: [], error: "오류" };
+
+console.log(res1);
+console.log(res2);
